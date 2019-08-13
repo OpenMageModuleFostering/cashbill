@@ -59,7 +59,7 @@ class Platnosci_Cashbill_Model_Payment_Cashbill extends Mage_Payment_Model_Metho
 		
 		$street = join(',',$billing->getStreet());
 		
-		$sign = md5($this->getShopID().$order->getBaseGrandTotal().'Zamówienie nr: '.$order_id.'PL'.$order_id.$billing->getFirstname().$billing->getLastname().$order->getCustomerEmail().$billing->getTelephone().$street.$billing->getCity().$billing->getPostcode().'Polska'.$this->getShopKey());
+		$sign = md5($this->getShopID().$order->getBaseGrandTotal().'Zamówienie nr: '.$order_id.'PL'.$order_id.'Magento'.$billing->getFirstname().$billing->getLastname().$order->getCustomerEmail().$billing->getTelephone().$street.$billing->getCity().$billing->getPostcode().'Polska'.$this->getShopKey());
 		
         $redirectionFormData = array(
             "service" => $this->getShopID(), //Identyfikator Punktu Płatności nadany w procesie tworzenia
@@ -67,6 +67,7 @@ class Platnosci_Cashbill_Model_Payment_Cashbill extends Mage_Payment_Model_Metho
 			"lang" => 'PL',
 			"desc" => "Zamówienie nr: ".$order_id, //Opis transakcji
 			"userdata" => $order_id, //Dane dodatkowe - id zamówienia
+			"ref"=> 'Magento',
 			"sign" => $sign, //Podpis wysyłanych danych 
 			"forname"  => $billing->getFirstname(),
             "surname" => $billing->getLastname(),
