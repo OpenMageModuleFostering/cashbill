@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Platnosci_Cashbill>
+      <version>1.0.1</version>
+      <depends>
+        <Mage_Payment />
+      </depends>
+    </Platnosci_Cashbill>
+  </modules>
+  <global>
+    <blocks>
+      <cashbill>
+        <class>Platnosci_Cashbill_Block</class>
+      </cashbill>
+    </blocks>
+    <models>
+      <cashbill>
+        <class>Platnosci_Cashbill_Model</class>
+      </cashbill>
+    </models>
+    <helpers>
+      <cashbill>
+        <class>Platnosci_Cashbill_Helper</class>
+      </cashbill>
+    </helpers>
+  </global>
+  <frontend>
+    <routers>
+      <cashbill>
+        <use>standard</use>
+        <args>
+          <module>Platnosci_Cashbill</module>
+          <frontName>cashbill</frontName>
+        </args>
+      </cashbill>
+    </routers>
+  </frontend>
+  <default>
+    <payment>
+      <platnosci_cashbill>
+        <active>0</active>
+        <model>cashbill/payment_cashbill</model>
+        <order_status>1</order_status>
+        <title>Płatności Cashbill</title>
+        <text>Po złożeniu zamówienia zostaniesz przeniesiony na stronę serwisu Cashbill w celu dokonania płatności.</text>
+        <min_order_total>0</min_order_total>
+        <max_order_total>0</max_order_total>
+        <commission>0</commission>
+      </platnosci_cashbill>
+    </payment>
+  </default>
+</config>

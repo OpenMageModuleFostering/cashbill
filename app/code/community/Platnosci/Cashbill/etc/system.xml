@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <payment>
+      <groups>
+		<platnosci_cashbill translate="label">
+          <label>Płatności Internetowe CashBill</label>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>0</show_in_store>
+		   <comment>
+		   <![CDATA[ 
+   <script>
+  
+  var baseUrl = location.href.split('admin')[0].replace(/index\.php\//,'') || '<adres_Twojego_sklepu>';
+  
+  </script>  
+	<div>
+    <lable><strong>Instalacja</strong></lable>
+    <p>Poniższe dane wprowadz w swoim panelu na stronie <a href="http://panel.cashbill.pl/">Panel CashBill</a></p>
+  </div>
+
+  <div style="margin-top:10px;">
+  <lable>Adres powortu do przeglądarki : </lable>
+		   <input type="text" size="50" style="margin-left:5px;" id="backurl" class="input-text" readonly>
+  </div>
+  <div style="margin-top:10px;">
+	<lable>Adres serwerowego potwierdzenia : </lable>
+		   <input type="text" size="50" style="margin-left:5px;" id="serverurl" class="input-text" value="Płatności Cashbill" readonly>	   
+  </div>
+    <div>
+  <p><a href="" id="instrukcja" target="_blank"><img id="pdf-icon" src="" /> Instrukcja Instalacji</a></p>
+  </div>
+    <div style="margin-top:20px;"><strong>Panel Administracyjny Modułu</strong></div>
+<script>
+document.getElementById("instrukcja").href = baseUrl+"/app/design/adminhtml/default/default/template/platnosci/cashbill/web/instrukcja.pdf";				   
+document.getElementById("pdf-icon").src = baseUrl+"/app/design/adminhtml/default/default/template/platnosci/cashbill/web/pdf-icon.png";				   
+document.getElementById("backurl").value = baseUrl+"/index.php/cashbill/cashbill/return";
+document.getElementById("serverurl").value = baseUrl+"/index.php/cashbill/cashbill/serwer";
+</script>		
+		   ]]>
+		   </comment>
+          <fields>
+            <active translate="label">
+              <label>Włączony</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </active>
+            <order_status translate="label">
+              <label>Status nowego zamówienia</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_order_status</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </order_status>
+            <complete_order_status translate="label">
+              <label>Status zamówienia po odebraniu płatności</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_order_status</source_model>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </complete_order_status>
+            <title translate="label">
+              <label>Tytuł</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </title>
+            <text translate="label">
+              <label>Opis</label>
+              <frontend_type>textarea</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </text>
+            <shopid translate="label">
+              <label>Identyfikator Punktu Płatności :</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </shopid>
+			<shopkey translate="label">
+              <label>Klucz Punktu Płatności :</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>7</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </shopkey> 
+            <min_order_total translate="label">
+              <label>Minimalna kwota zamówienia</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>9</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </min_order_total>
+            <max_order_total translate="label">
+              <label>Maksymalna kwota zamówienia</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </max_order_total>
+            <sort_order translate="label">
+              <label>Pozycja w płatnościach</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>100</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>0</show_in_store>
+            </sort_order>
+          </fields>
+        </platnosci_cashbill>
+      </groups>
+    </payment>
+  </sections>
+</config>

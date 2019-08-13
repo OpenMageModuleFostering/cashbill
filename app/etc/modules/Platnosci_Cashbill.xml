@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+       <Platnosci_Cashbill>
+	       <active>true</active>
+	       <codePool>community</codePool>
+       </Platnosci_Cashbill>
+    </modules>
+</config>

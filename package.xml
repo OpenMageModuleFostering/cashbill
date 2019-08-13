@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>cashbill</name>
+    <version>1.0.2</version>
+    <stability>stable</stability>
+    <license>MIT License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Modu&#x142; p&#x142;atno&#x15B;ci CashBill</summary>
+    <description>Dzi&#x119;ki modu&#x142;owi mo&#x17C;esz zaimplementowa&#x107; proste p&#x142;atno&#x15B;ic internetowe z wykorzystanie cashbill.pl</description>
+    <notes>Stabilna wersja 1.0.2</notes>
+    <authors><author><name>CashBill S.A.</name><user>cashbill</user><email>lukasz.firek@cashbill.pl</email></author></authors>
+    <date>2014-12-08</date>
+    <time>13:02:04</time>
+    <contents><target name="magecommunity"><dir name="Platnosci"><dir name="Cashbill"><dir name="Block"><dir name="Form"><file name="Cashbill.php" hash="87f212bc545259d8f36490050ea52184"/></dir><dir name="Info"><file name="Cashbill.php" hash="3186b1b56e743cba5cfbc95741af3e3e"/></dir><dir name="Payment"><dir name="Cashbill"><file name="Redirect.php" hash="9cf18bc23bb84f6625eee6dfd509bae7"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="a379f479daa6b5ae48060c2c8338a049"/></dir><dir name="Model"><dir name="Payment"><file name="Cashbill.php" hash="09cf3f239ef1113ba142bc0f2158f379"/></dir></dir><dir name="controllers"><file name="CashbillController.php" hash="515a6550121cb980ddcfc2be31b876d7"/></dir><dir name="etc"><file name="config.xml" hash="8d7ff4156ffd12be31777c6232a730c0"/><file name="system.xml" hash="dfeb682785ef87672f6e54b5b36c1be0"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="platnosci"><dir name="cashbill"><file name="form.phtml" hash="13b8f868d56c95d1965e86775449c394"/><file name="info.phtml" hash="01d8487be6c7b0019a926ff1e8c66893"/><dir name="web"><file name="instrukcja.pdf" hash="174d1b2681202d5bff27eb043f84602e"/><file name="pdf-icon.png" hash="28cdd201144351e73035a9a0e87873c0"/><file name=".htaccess" hash="b203ef4b9ebf35472826208edae9b525"/></dir></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="platnosci"><dir name="cashbill"><file name="form.phtml" hash="ca71e26277dec846d2d2df101faf2b0e"/><file name="info.phtml" hash="01d8487be6c7b0019a926ff1e8c66893"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Platnosci_Cashbill.xml" hash="2f740e398944f2422f4504b69d8a32bb"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
