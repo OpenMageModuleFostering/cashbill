@@ -16,6 +16,8 @@
   var baseUrl = location.href.split('admin')[0].replace(/index\.php\//,'') || '<adres_Twojego_sklepu>';
   
   </script>  
+  <div id="wersja">
+  </div>
 	<div>
     <lable><strong>Instalacja</strong></lable>
     <p>Poniższe dane wprowadz w swoim panelu na stronie <a href="http://panel.cashbill.pl/">Panel CashBill</a></p>
@@ -38,6 +40,13 @@ document.getElementById("instrukcja").href = baseUrl+"/app/design/adminhtml/defa
 document.getElementById("pdf-icon").src = baseUrl+"/app/design/adminhtml/default/default/template/platnosci/cashbill/web/pdf-icon.png";				   
 document.getElementById("backurl").value = baseUrl+"/index.php/cashbill/cashbill/return";
 document.getElementById("serverurl").value = baseUrl+"/index.php/cashbill/cashbill/serwer";
+
+var xmlhttp;
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("GET",baseUrl+"/app/code/community/Platnosci/Cashbill/controllers/CheckController.php",false);
+xmlhttp.send();
+
+document.getElementById("wersja").innerHTML = xmlhttp.responseText;
 </script>		
 		   ]]>
 		   </comment>
