@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/cashbill",
+    "name": "OpenMageModuleFostering\/cashbill",
     "type": "magento-module",
     "license": "MIT-License",
     "homepage": "",
-    "description": "Moduł płatności CashBill",
+    "description": "Modu\u0142 p\u0142atno\u015bci CashBill",
     "authors": [
-    {
-        "name": "CashBill S.A.",
-        "email": "lukasz.firek@cashbill.pl"
-    }
-],
+        {
+            "name": "CashBill S.A.",
+            "email": "lukasz.firek@cashbill.pl"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
